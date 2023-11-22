@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Quicksand&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #a5c1de;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Box Shadow */
+nav,
+.catalog,
+.card,
+aside header {
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+}
+
+/* Header - Nav */
+#header,
+#header a {
+  color: antiquewhite;
+}
+#header {
+  display: inline;
+}
+header .nav {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+nav {
+  display: flex;
+  top: 0;
+  background-color: #33425b;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .brand a {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1.5px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 60%;
+  justify-content: space-around;
+}
+nav ul li a:hover {
+  color: #fff;
+}
+.toggle-menu {
+  display: none;
+  position: relative;
+}
+.toggle-menu #bar1,
+#bar2 {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.toggle-menu #bar2 {
+  display: none;
+}
+/* Header - Nav End */
+
+/* Jumbotron */
+.jumbotron {
+  padding: 150px 10px;
+  background-image: url("../img/bg-jumbotron.jpg");
+  background-size: cover;
+  background-position: fixed;
+  text-align: center;
+  font-weight: bold;
+  opacity: 80%;
+}
+.jumbotron h1 {
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  padding-bottom: 5px;
+}
+.jumbotron p {
+  text-shadow: 1px 1px rgb(0, 0, 0);
+}
+/* Jumbotron End */
+
+#backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+main {
+  padding: 50px 50px 20px 50px;
+  overflow: auto;
+}
+main p {
+  text-align: justify;
+}
+.content {
+  float: left;
+  width: 75%;
+}
+.content h2 {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  color: black;
+}
+.catalog,
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #b4cde6;
+  border-radius: 5px;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 37.5%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #c0eef2;
+  margin: 15px 15px 20px 15px;
+  text-align: center;
+}
+.card h3,
+h4 {
+  text-align: justify;
+}
+.card section {
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.card img:hover {
+  cursor: pointer;
+}
+.card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+.card li {
+  text-align: justify;
+  font-size: 16px;
+  padding-top: 2px;
+}
+.card span {
+  margin-top: 5px;
+  text-align: left;
+}
+input:number {
+  font-size: 14px;
+  margin-top: 5px;
+}
+.cart {
+  background-color: #a5c1de;
+  border-radius: 5px;
+  padding: 2px 7px;
+  color: black;
+}
+/* Card End */
+
+/* About */
+.about article {
+  display: flex;
+  padding: 0 50px;
+  text-align: center;
+  align-items: center;
+}
+.about section {
+  justify-content: space-evenly;
+}
+.about img {
+  width: 100%;
+  overflow: clip;
+  align-items: center;
+  padding-right: 30px;
+}
+/* About End */
+
+/* Aside */
+aside {
+  float: right;
+  width: 25%;
+  padding-left: 30px;
+  text-align: center;
+}
+aside header {
+  background-color: #b4cde6;
+  padding: 15px;
+  border-radius: 5px;
+}
+aside img {
+  border-radius: 50%;
+  width: 150px;
+}
+aside .aside-text {
+  text-align: center;
+}
+aside h3 {
+  margin-bottom: 10px;
+}
+/* Aside End */
+
+#myBtn {
+  display: none;
+  font-size: 2rem;
+  position: fixed;
+  z-index: 1;
+  color: #538abd;
+  cursor: pointer;
+  bottom: 15px;
+  right: 20px;
+}
+
+footer {
+  background-color: #33425b;
+  text-align: center;
+  color: antiquewhite;
+  padding: 15px 0;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    padding-bottom: 50px;
+  }
+  .content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+  aside img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .about article {
+    flex-direction: column;
+  }
+  .about img {
+    width: 75%;
+    padding-right: 0;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card h3 {
+    font-size: 16px;
+  }
+  .card h4 {
+    font-size: 15px;
+  }
+  .card li {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .card {
+    width: 75%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .card section {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .card img {
+    width: 250px;
+    margin-right: 10px;
+    overflow: clip;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+  .card {
+    flex-direction: column;
+  }
+  .card img {
+    margin-right: 0;
+  }
+  .about img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  main {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .toggle-menu {
+    display: block;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #4c6183;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 1s;
+    z-index: -1;
+    opacity: 0;
+  }
+  nav ul.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .content h2 {
+    font-size: 20px;
+  }
+  .card {
+    width: 100%;
+  }
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card h3 {
+    font-size: 15px;
+  }
+  .card h4 {
+    font-size: 14px;
+  }
+  .card li {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card h3 {
+    font-size: 14px;
+  }
+  .card h4 {
+    font-size: 13px;
+  }
+  .card li {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main {
+    padding: 20px;
+  }
+}
